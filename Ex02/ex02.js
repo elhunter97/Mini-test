@@ -9,6 +9,14 @@ function rank(mark){
     return r;
 }
 
+function avr(arr){
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum+= arr[i];
+    }
+    return sum/arr.length;
+}
+
 let arr = [];
 let length = arr.length;
 do{
@@ -29,6 +37,11 @@ for(let i = 0;i<length;i++){
     if(rank(arr[i])==='B') cntB++;
     if(rank(arr[i])==='C') cntC++;
 }
+// Dem moi hang co bao nhieu hoc sinh
 console.log('Rank A: '+cntA+' students');
 console.log('Rank B: '+cntB+' students');
 console.log('Rank C: '+cntC+' students');
+
+// tinh diem trung binh
+let avrMark = avr(arr);
+console.log('Average mark = '+avrMark);
